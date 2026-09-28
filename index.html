@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoPrecisión - Taller Mecánico</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">Auto<span>Precisión</span></div>
+            <nav>
+                <a href="#inicio">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#mecanico">Mecánico a domicilio</a>
+                <a href="#piezas">Comprar piezas</a>
+                <a href="#como-funciona">Cómo funciona</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <p class="tag">TALLER MECÁNICO · 12 AÑOS</p>
+                <h1>Tu taller de confianza,<br>ahora también donde estés.</h1>
+                <p class="subtitle">
+                    Mantenimiento, diagnóstico y reparación en el taller.
+                    Si tu vehículo se avería, pide un mecánico a domicilio y sigue el estado desde tu celular.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#mecanico" class="btn btn-primary">Pedir mecánico a domicilio</a>
+                    <a href="#piezas" class="btn btn-outline">Comprar piezas</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="servicios" class="servicios">
+        <div class="container">
+            <h2>Nuestros servicios</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Mantenimiento preventivo</h3>
+                    <p>Aceite, filtros y bujías para que tu vehículo no te deje tirado.</p>
+                </div>
+                <div class="card">
+                    <h3>Frenos y suspensión</h3>
+                    <p>Revisión y cambio de piezas con repuestos controlados.</p>
+                </div>
+                <div class="card">
+                    <h3>Diagnóstico y reparación</h3>
+                    <p>Cada orden con estado visible: recibido, diagnóstico, reparando, listo.</p>
+                </div>
+                <div class="card card-destacada">
+                    <h3>Mecánico a domicilio</h3>
+                    <p>Para averías que se pueden resolver donde está tu vehículo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULARIO MECÁNICO A DOMICILIO -->
+    <section id="mecanico" class="mecanico">
+        <div class="container">
+            <div class="form-wrapper">
+                <div class="form-info">
+                    <h2>Solicitar mecánico a domicilio</h2>
+                    <p>Llena el formulario. El correo llegará directamente a nuestro Gmail.</p>
+                </div>
+
+                <form action="https://formspree.io/f/xeaovgge" method="POST">
+                    <input type="hidden" name="_subject" value="Nueva solicitud de mecánico a domicilio - AutoPrecisión">
+
+                    <div class="form-group">
+                        <label>Nombre completo</label>
+                        <input type="text" name="nombre" placeholder="Tu nombre completo" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Teléfono</label>
+                        <input type="tel" name="telefono" placeholder="Número de contacto" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Vehículo (marca, modelo, placa)</label>
+                        <input type="text" name="vehiculo" placeholder="Ej.: Toyota Corolla - A123456" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Tipo de avería</label>
+                        <select name="averia" required>
+                            <option value="">Selecciona una opción</option>
+                            <option>Batería / no enciende</option>
+                            <option>Frenos</option>
+                            <option>Motor</option>
+                            <option>Suspensión</option>
+                            <option>Otros</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Ubicación / Dirección</label>
+                        <input type="text" name="ubicacion" placeholder="Dirección completa o punto de referencia" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Descripción del problema</label>
+                        <textarea name="descripcion" rows="3" placeholder="Describe brevemente qué le pasa al vehículo"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary full">Enviar solicitud</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPRAR PIEZAS -->
+    <section id="piezas" class="piezas">
+        <div class="container">
+            <h2>Comprar piezas</h2>
+            <p class="section-subtitle">Selecciona una pieza y completa el formulario de pedido</p>
+
+            <div class="productos">
+                <div class="producto">
+                    <div class="producto-img">🔋</div>
+                    <h3>Batería 12V</h3>
+                    <p class="precio">RD$ 6,500</p>
+                    <button class="btn btn-primary btn-comprar" data-pieza="Batería 12V" data-precio="6500">Pedir esta pieza</button>
+                </div>
+
+                <div class="producto">
+                    <div class="producto-img">🛢️</div>
+                    <h3>Aceite sintético 5W-30</h3>
+                    <p class="precio">RD$ 1,850</p>
+                    <button class="btn btn-primary btn-comprar" data-pieza="Aceite sintético 5W-30" data-precio="1850">Pedir esta pieza</button>
+                </div>
+
+                <div class="producto">
+                    <div class="producto-img">🛑</div>
+                    <h3>Pastillas de freno</h3>
+                    <p class="precio">RD$ 3,200</p>
+                    <button class="btn btn-primary btn-comprar" data-pieza="Pastillas de freno" data-precio="3200">Pedir esta pieza</button>
+                </div>
+
+                <div class="producto">
+                    <div class="producto-img">⚙️</div>
+                    <h3>Filtro de aire</h3>
+                    <p class="precio">RD$ 950</p>
+                    <button class="btn btn-primary btn-comprar" data-pieza="Filtro de aire" data-precio="950">Pedir esta pieza</button>
+                </div>
+
+                <div class="producto">
+                    <div class="producto-img">🔧</div>
+                    <h3>Motor de arranque</h3>
+                    <p class="precio">RD$ 12,800</p>
+                    <button class="btn btn-primary btn-comprar" data-pieza="Motor de arranque" data-precio="12800">Pedir esta pieza</button>
+                </div>
+
+                <div class="producto">
+                    <div class="producto-img">💡</div>
+                    <h3>Kit de bujías</h3>
+                    <p class="precio">RD$ 2,400</p>
+                    <button class="btn btn-primary btn-comprar" data-pieza="Kit de bujías" data-precio="2400">Pedir esta pieza</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CÓMO FUNCIONA -->
+    <section id="como-funciona" class="como-funciona">
+        <div class="container">
+            <h2>Cómo funciona el servicio a domicilio</h2>
+            <div class="pasos">
+                <div class="paso">
+                    <div class="numero">1</div>
+                    <h3>Envías tu solicitud</h3>
+                    <p>Indicas tu avería y tu ubicación.</p>
+                </div>
+                <div class="paso">
+                    <div class="numero">2</div>
+                    <h3>Asignamos un mecánico</h3>
+                    <p>Recibes confirmación con tu código.</p>
+                </div>
+                <div class="paso">
+                    <div class="numero">3</div>
+                    <h3>Vamos a donde estás</h3>
+                    <p>Diagnóstico y reparación en el lugar, si es posible.</p>
+                </div>
+                <div class="paso">
+                    <div class="numero">4</div>
+                    <h3>Factura y seguimiento</h3>
+                    <p>Si hay que llevarlo al taller, seguimos con tu orden.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>AutoPrecisión © 2025 — Estudio de caso</p>
+            <p>Los formularios envían notificaciones reales al correo del taller.</p>
+        </div>
+    </footer>
+
+    <!-- MODAL FORMULARIO DE COMPRA -->
+    <div id="modalCompra" class="modal">
+        <div class="modal-content">
+            <span class="cerrar" id="cerrarCompra">&times;</span>
+            <h3>Completar pedido de pieza</h3>
+            <p id="piezaSeleccionada" style="margin-bottom:15px; color:#e05a00; font-weight:600;"></p>
+
+            <form action="https://formspree.io/f/xgavrkkk" method="POST">
+                <input type="hidden" name="_subject" value="Nueva compra de pieza - AutoPrecisión">
+                <input type="hidden" name="pieza" id="inputPieza">
+                <input type="hidden" name="precio" id="inputPrecio">
+
+                <div class="form-group">
+                    <label>Nombre completo</label>
+                    <input type="text" name="nombre" placeholder="Tu nombre completo" required>
+                </div>
+                <div class="form-group">
+                    <label>Teléfono</label>
+                    <input type="tel" name="telefono" placeholder="Número de contacto" required>
+                </div>
+                <div class="form-group">
+                    <label>Dirección de entrega</label>
+                    <input type="text" name="direccion" placeholder="Calle, número, sector, ciudad" required>
+                </div>
+                <div class="form-group">
+                    <label>Referencias (opcional)</label>
+                    <textarea name="referencias" rows="2" placeholder="Entre calles, color de casa, punto de referencia, etc."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary full">Confirmar pedido</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
