@@ -5,9 +5,9 @@
 }
 
 body {
-    font-family: 'Segoe UI', system-ui, sans-serif;
-    background: #f8f5f0;
-    color: #1a1a1a;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: #0f0f0f;
+    color: #e5e5e5;
     line-height: 1.6;
 }
 
@@ -17,10 +17,10 @@ body {
     padding: 0 20px;
 }
 
-/* HEADER */
+/* ========== HEADER ========== */
 header {
-    background: #fff;
-    border-bottom: 1px solid #eee;
+    background: #1a1a1a;
+    border-bottom: 1px solid #2a2a2a;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -36,48 +36,52 @@ header {
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
+    color: #fff;
 }
 
     .logo span {
-        color: #e05a00;
+        color: #ff6b00;
     }
 
 nav a {
     margin-left: 25px;
     text-decoration: none;
-    color: #333;
+    color: #b0b0b0;
     font-weight: 500;
     font-size: 0.95rem;
+    transition: color 0.2s;
 }
 
     nav a:hover {
-        color: #e05a00;
+        color: #ff6b00;
     }
 
-/* HERO */
+/* ========== HERO ========== */
 .hero {
-    padding: 80px 0 60px;
-    background: linear-gradient(135deg, #f8f5f0 0%, #fff 100%);
+    padding: 90px 0 70px;
+    background: linear-gradient(145deg, #141414 0%, #1a1a1a 100%);
 }
 
 .hero-text h1 {
-    font-size: 2.8rem;
-    line-height: 1.2;
+    font-size: 2.9rem;
+    line-height: 1.15;
     margin: 15px 0;
     font-weight: 800;
+    color: #ffffff;
 }
 
 .tag {
-    color: #e05a00;
+    color: #ff6b00;
     font-weight: 600;
     font-size: 0.9rem;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
 }
 
 .subtitle {
-    color: #555;
-    max-width: 520px;
-    margin-bottom: 30px;
+    color: #a0a0a0;
+    max-width: 540px;
+    margin-bottom: 35px;
+    font-size: 1.05rem;
 }
 
 .hero-buttons {
@@ -86,106 +90,124 @@ nav a {
     flex-wrap: wrap;
 }
 
-/* BOTONES */
+/* ========== BOTONES ========== */
 .btn {
     display: inline-block;
-    padding: 12px 28px;
+    padding: 13px 30px;
     border-radius: 8px;
     font-weight: 600;
     text-decoration: none;
     border: none;
     cursor: pointer;
     font-size: 1rem;
-    transition: all 0.2s;
+    transition: all 0.25s ease;
 }
 
 .btn-primary {
-    background: #e05a00;
-    color: white;
+    background: #ff6b00;
+    color: #fff;
 }
 
     .btn-primary:hover {
-        background: #c44d00;
+        background: #e55f00;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(255, 107, 0, 0.3);
     }
 
 .btn-outline {
-    background: white;
-    border: 2px solid #ddd;
-    color: #333;
+    background: transparent;
+    border: 2px solid #3a3a3a;
+    color: #e0e0e0;
 }
 
     .btn-outline:hover {
-        border-color: #e05a00;
-        color: #e05a00;
+        border-color: #ff6b00;
+        color: #ff6b00;
     }
 
 .full {
     width: 100%;
 }
 
-/* SERVICIOS */
+/* ========== SERVICIOS ========== */
 .servicios {
-    padding: 70px 0;
+    padding: 80px 0;
+    background: #0f0f0f;
 }
 
     .servicios h2 {
         text-align: center;
-        font-size: 2rem;
-        margin-bottom: 40px;
+        font-size: 2.1rem;
+        margin-bottom: 45px;
+        color: #fff;
     }
 
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 20px;
+    gap: 22px;
 }
 
 .card {
-    background: white;
-    padding: 28px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    background: #1a1a1a;
+    padding: 30px 26px;
+    border-radius: 14px;
+    border: 1px solid #2a2a2a;
+    transition: all 0.25s ease;
 }
 
+    .card:hover {
+        border-color: #ff6b00;
+        transform: translateY(-4px);
+    }
+
     .card h3 {
-        margin-bottom: 10px;
+        margin-bottom: 12px;
         font-size: 1.2rem;
+        color: #fff;
     }
 
     .card p {
-        color: #555;
+        color: #a0a0a0;
         font-size: 0.95rem;
     }
 
 .card-destacada {
-    background: #e05a00;
-    color: white;
+    background: linear-gradient(145deg, #ff6b00, #e55f00);
+    border: none;
+    color: #fff;
 }
 
-    .card-destacada p {
-        color: rgba(255,255,255,0.9);
+    .card-destacada h3 {
+        color: #fff;
     }
 
-/* FORMULARIO MECÁNICO */
+    .card-destacada p {
+        color: rgba(255, 255, 255, 0.9);
+    }
+
+/* ========== FORMULARIO MECÁNICO ========== */
 .mecanico {
-    padding: 70px 0;
-    background: #fff;
+    padding: 80px 0;
+    background: #141414;
 }
 
 .form-wrapper {
     max-width: 600px;
     margin: 0 auto;
-    background: #f8f5f0;
-    padding: 40px;
+    background: #1a1a1a;
+    padding: 42px;
     border-radius: 16px;
+    border: 1px solid #2a2a2a;
 }
 
 .form-info h2 {
     margin-bottom: 10px;
+    color: #fff;
 }
 
 .form-info p {
-    color: #666;
+    color: #a0a0a0;
     margin-bottom: 30px;
 }
 
@@ -195,91 +217,106 @@ nav a {
 
     .form-group label {
         display: block;
-        margin-bottom: 6px;
+        margin-bottom: 7px;
         font-weight: 600;
         font-size: 0.9rem;
+        color: #d0d0d0;
     }
 
     .form-group input,
     .form-group select,
     .form-group textarea {
         width: 100%;
-        padding: 12px 14px;
-        border: 1px solid #ddd;
+        padding: 13px 15px;
+        border: 1px solid #333;
         border-radius: 8px;
         font-size: 1rem;
         font-family: inherit;
+        background: #121212;
+        color: #fff;
+        transition: border-color 0.2s;
     }
 
         .form-group input:focus,
         .form-group select:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: #e05a00;
+            border-color: #ff6b00;
         }
 
-/* PIEZAS */
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #666;
+        }
+
+/* ========== PIEZAS ========== */
 .piezas {
-    padding: 70px 0;
+    padding: 80px 0;
+    background: #0f0f0f;
 }
 
     .piezas h2 {
         text-align: center;
-        font-size: 2rem;
+        font-size: 2.1rem;
+        color: #fff;
     }
 
 .section-subtitle {
     text-align: center;
-    color: #666;
-    margin-bottom: 40px;
+    color: #a0a0a0;
+    margin-bottom: 45px;
 }
 
 .productos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 25px;
+    gap: 24px;
 }
 
 .producto {
-    background: white;
-    border-radius: 12px;
-    padding: 25px 20px;
+    background: #1a1a1a;
+    border-radius: 14px;
+    padding: 28px 20px;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    transition: transform 0.2s;
+    border: 1px solid #2a2a2a;
+    transition: all 0.25s ease;
 }
 
     .producto:hover {
-        transform: translateY(-5px);
+        transform: translateY(-6px);
+        border-color: #ff6b00;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
     }
 
 .producto-img {
-    font-size: 3rem;
+    font-size: 3.2rem;
     margin-bottom: 15px;
 }
 
 .producto h3 {
     font-size: 1.1rem;
     margin-bottom: 8px;
+    color: #fff;
 }
 
 .precio {
-    color: #e05a00;
+    color: #ff6b00;
     font-weight: 700;
-    font-size: 1.2rem;
-    margin-bottom: 15px;
+    font-size: 1.25rem;
+    margin-bottom: 18px;
 }
 
-/* CÓMO FUNCIONA */
+/* ========== CÓMO FUNCIONA ========== */
 .como-funciona {
-    padding: 70px 0;
-    background: #fff;
+    padding: 80px 0;
+    background: #141414;
 }
 
     .como-funciona h2 {
         text-align: center;
-        font-size: 2rem;
-        margin-bottom: 50px;
+        font-size: 2.1rem;
+        margin-bottom: 55px;
+        color: #fff;
     }
 
 .pasos {
@@ -293,42 +330,45 @@ nav a {
 }
 
 .numero {
-    width: 50px;
-    height: 50px;
-    background: #e05a00;
-    color: white;
+    width: 54px;
+    height: 54px;
+    background: #ff6b00;
+    color: #fff;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.4rem;
     font-weight: 700;
-    margin: 0 auto 15px;
+    margin: 0 auto 16px;
+    box-shadow: 0 6px 20px rgba(255, 107, 0, 0.3);
 }
 
 .paso h3 {
     margin-bottom: 8px;
+    color: #fff;
 }
 
 .paso p {
-    color: #555;
+    color: #a0a0a0;
     font-size: 0.95rem;
 }
 
-/* FOOTER */
+/* ========== FOOTER ========== */
 footer {
-    background: #1a1a1a;
-    color: #aaa;
+    background: #0a0a0a;
+    color: #777;
     text-align: center;
-    padding: 30px 0;
+    padding: 35px 0;
     font-size: 0.9rem;
+    border-top: 1px solid #1f1f1f;
 }
 
     footer p {
         margin: 5px 0;
     }
 
-/* MODAL */
+/* ========== MODAL ========== */
 .modal {
     display: none;
     position: fixed;
@@ -336,7 +376,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.75);
     z-index: 1000;
     align-items: center;
     justify-content: center;
@@ -347,14 +387,20 @@ footer {
     }
 
 .modal-content {
-    background: white;
-    padding: 35px;
+    background: #1a1a1a;
+    padding: 38px;
     border-radius: 16px;
     max-width: 480px;
     width: 90%;
     position: relative;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    border: 1px solid #333;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
 }
+
+    .modal-content h3 {
+        color: #fff;
+        margin-bottom: 8px;
+    }
 
 .cerrar {
     position: absolute;
@@ -362,21 +408,23 @@ footer {
     right: 20px;
     font-size: 1.8rem;
     cursor: pointer;
-    color: #999;
+    color: #888;
+    transition: color 0.2s;
 }
 
     .cerrar:hover {
-        color: #333;
+        color: #ff6b00;
     }
 
 #piezaSeleccionada {
     font-size: 1.1rem;
+    color: #ff6b00 !important;
 }
 
-/* RESPONSIVE */
+/* ========== RESPONSIVE ========== */
 @media (max-width: 700px) {
     .hero-text h1 {
-        font-size: 2rem;
+        font-size: 2.1rem;
     }
 
     nav {
@@ -384,6 +432,10 @@ footer {
     }
 
     .form-wrapper {
-        padding: 25px;
+        padding: 28px 22px;
+    }
+
+    .hero {
+        padding: 60px 0 50px;
     }
 }
