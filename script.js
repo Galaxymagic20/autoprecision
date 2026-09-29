@@ -20,7 +20,7 @@ function generarCodigo() {
     return `AP-${numero}`;
 }
 
-// ===== FORMULARIO MECÁNICO (con código) =====
+// ===== FORMULARIO MECÁNICO =====
 const formMecanico = document.getElementById('formMecanico');
 const modalExito = document.getElementById('modalExito');
 const codigoMostrado = document.getElementById('codigoMostrado');
@@ -111,6 +111,7 @@ const estadoTitulo = document.getElementById('estadoTitulo');
 const estadoBadge = document.getElementById('estadoBadge');
 const timeline = document.getElementById('timeline');
 const estadoMensaje = document.getElementById('estadoMensaje');
+const tiempoEstimado = document.getElementById('tiempoEstimado');
 
 const estados = [
     { nombre: 'Solicitada', mensaje: 'Tu solicitud fue recibida correctamente.' },
@@ -132,9 +133,13 @@ if (btnSeguimiento) {
         const estadoIndex = Math.floor(Math.random() * estados.length);
         const estadoActual = estados[estadoIndex];
 
+        // Tiempo estimado aleatorio entre 1 y 48 horas
+        const horas = Math.floor(Math.random() * 48) + 1;
+
         estadoTitulo.textContent = `Orden ${codigo}`;
         estadoBadge.textContent = estadoActual.nombre;
         estadoMensaje.textContent = estadoActual.mensaje;
+        tiempoEstimado.innerHTML = `⏱ Tiempo estimado de llegada / finalización: <strong>${horas} hora${horas > 1 ? 's' : ''}</strong>`;
 
         timeline.innerHTML = '';
         estados.forEach((est, index) => {
