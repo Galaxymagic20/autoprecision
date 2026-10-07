@@ -9,7 +9,6 @@
 </head>
 <body>
 
-    <!-- HEADER -->
     <header>
         <div class="container header-content">
             <div class="logo">Auto<span>Precisión</span></div>
@@ -25,7 +24,6 @@
         </div>
     </header>
 
-    <!-- HERO -->
     <section id="inicio" class="hero">
         <div class="container">
             <p class="tag">TALLER MECÁNICO · 12 AÑOS</p>
@@ -38,7 +36,6 @@
         </div>
     </section>
 
-    <!-- SERVICIOS -->
     <section id="servicios" class="servicios">
         <div class="container">
             <h2>Nuestros servicios</h2>
@@ -67,7 +64,6 @@
         </div>
     </section>
 
-    <!-- FORMULARIO MECÁNICO -->
     <section id="mecanico" class="mecanico">
         <div class="container">
             <div class="form-wrapper">
@@ -113,53 +109,14 @@
         </div>
     </section>
 
-    <!-- COMPRAR PIEZAS -->
     <section id="piezas" class="piezas">
         <div class="container">
             <h2>Comprar piezas</h2>
-            <p class="section-subtitle">Selecciona una pieza y completa el pedido</p>
-            <div class="productos">
-                <div class="producto">
-                    <div class="producto-img">🔋</div>
-                    <h3>Batería 12V</h3>
-                    <p class="precio">RD$ 6,500</p>
-                    <button class="btn btn-primary btn-comprar" data-pieza="Batería 12V" data-precio="6500">Comprar</button>
-                </div>
-                <div class="producto">
-                    <div class="producto-img">🛢️</div>
-                    <h3>Aceite sintético 5W-30</h3>
-                    <p class="precio">RD$ 1,850</p>
-                    <button class="btn btn-primary btn-comprar" data-pieza="Aceite sintético 5W-30" data-precio="1850">Comprar</button>
-                </div>
-                <div class="producto">
-                    <div class="producto-img">🛑</div>
-                    <h3>Pastillas de freno</h3>
-                    <p class="precio">RD$ 3,200</p>
-                    <button class="btn btn-primary btn-comprar" data-pieza="Pastillas de freno" data-precio="3200">Comprar</button>
-                </div>
-                <div class="producto">
-                    <div class="producto-img">⚙️</div>
-                    <h3>Filtro de aire</h3>
-                    <p class="precio">RD$ 950</p>
-                    <button class="btn btn-primary btn-comprar" data-pieza="Filtro de aire" data-precio="950">Comprar</button>
-                </div>
-                <div class="producto">
-                    <div class="producto-img">🔧</div>
-                    <h3>Motor de arranque</h3>
-                    <p class="precio">RD$ 12,800</p>
-                    <button class="btn btn-primary btn-comprar" data-pieza="Motor de arranque" data-precio="12800">Comprar</button>
-                </div>
-                <div class="producto">
-                    <div class="producto-img">💡</div>
-                    <h3>Kit de bujías</h3>
-                    <p class="precio">RD$ 2,400</p>
-                    <button class="btn btn-primary btn-comprar" data-pieza="Kit de bujías" data-precio="2400">Comprar</button>
-                </div>
-            </div>
+            <p class="section-subtitle">Stock actualizado en tiempo real</p>
+            <div class="productos" id="listaPiezas"></div>
         </div>
     </section>
 
-    <!-- SEGUIMIENTO -->
     <section id="seguimiento" class="seguimiento">
         <div class="container">
             <h2>Consulta el estado de tu orden</h2>
@@ -182,7 +139,6 @@
         </div>
     </section>
 
-    <!-- TESTIMONIOS -->
     <section id="testimonios" class="testimonios">
         <div class="container">
             <h2>Lo que dicen nuestros clientes</h2>
@@ -206,7 +162,6 @@
         </div>
     </section>
 
-    <!-- CÓMO FUNCIONA -->
     <section id="como-funciona" class="como-funciona">
         <div class="container">
             <h2>Cómo funciona el servicio a domicilio</h2>
@@ -235,39 +190,35 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer>
         <div class="container">
             <p><strong>AutoPrecisión</strong> © 2025 — Estudio de caso</p>
             <p>Horario: Lunes a Sábado 8:00 am - 6:00 pm</p>
-            <p>WhatsApp: +1 849 433 7673 <span id="btnAdminOculto" style="opacity:0.18; cursor:pointer; margin-left:8px;" title="Admin">★</span></p>
+            <p>WhatsApp: +1 849 433 7673 <span id="btnAdminOculto" style="opacity:0.18; cursor:pointer; margin-left:8px;">★</span></p>
         </div>
     </footer>
 
-    <!-- WHATSAPP -->
     <a href="https://wa.me/18494337673" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
-    <!-- MODAL LOGIN ADMIN -->
     <div id="modalLogin" class="modal">
         <div class="modal-content">
             <span class="cerrar" id="cerrarLogin">&times;</span>
-            <h3>Acceso Administración</h3>
+            <h3>Iniciar sesión</h3>
             <div class="form-group">
                 <label>Correo</label>
-                <input type="email" id="adminEmail" placeholder="Correo electrónico">
+                <input type="email" id="loginEmail" placeholder="Correo electrónico">
             </div>
             <div class="form-group">
                 <label>Contraseña</label>
-                <input type="password" id="adminPass" placeholder="Contraseña">
+                <input type="password" id="loginPass" placeholder="Contraseña">
             </div>
             <button class="btn btn-primary full" id="btnLogin">Entrar</button>
             <p id="errorLogin" style="color:#ff6b00; text-align:center; margin-top:12px; display:none;">Datos incorrectos</p>
         </div>
     </div>
 
-    <!-- PANEL ADMIN -->
-    <div id="panelAdmin" class="panel-admin" style="display:none;">
-        <div class="admin-header">
+    <div id="panelAdmin" class="panel-full" style="display:none;">
+        <div class="admin-top">
             <h2>Panel de Administración</h2>
             <button class="btn btn-outline" id="btnSalirAdmin">Salir</button>
         </div>
@@ -278,11 +229,24 @@
             <button class="tab-btn activo" data-tab="solicitudes">Solicitudes</button>
             <button class="tab-btn" data-tab="pedidos">Pedidos</button>
             <button class="tab-btn" data-tab="facturas">Facturas</button>
+            <button class="tab-btn" data-tab="stock">Stock</button>
+            <button class="tab-btn" data-tab="mecanicos">Mecánicos</button>
         </div>
         <div id="contenidoAdmin"></div>
     </div>
 
-    <!-- MODAL COMPRA + TARJETA -->
+    <div id="panelMecanico" class="panel-full panel-mecanico" style="display:none;">
+        <div class="mec-header">
+            <div>
+                <p class="mec-saludo">Hola,</p>
+                <h2 id="nombreMecanico">Mecánico</h2>
+            </div>
+            <button class="btn btn-outline" id="btnSalirMecanico">Salir</button>
+        </div>
+        <p class="mec-subtitulo">Tus servicios a domicilio asignados</p>
+        <div id="listaTrabajosMecanico"></div>
+    </div>
+
     <div id="modalCompra" class="modal">
         <div class="modal-content" style="max-width:520px;">
             <span class="cerrar" id="cerrarCompra">&times;</span>
@@ -291,6 +255,7 @@
             <form id="formPedido">
                 <input type="hidden" id="inputPieza">
                 <input type="hidden" id="inputPrecio">
+                <input type="hidden" id="inputPiezaId">
                 <h4 style="margin:10px 0; color:#aaa; font-size:0.95rem;">Datos de entrega</h4>
                 <div class="form-group"><label>Nombre completo</label><input type="text" name="nombre" required></div>
                 <div class="form-group"><label>Teléfono</label><input type="tel" name="telefono" required></div>
@@ -306,7 +271,6 @@
         </div>
     </div>
 
-    <!-- MODAL ÉXITO / FACTURA -->
     <div id="modalExito" class="modal">
         <div class="modal-content" style="max-width:480px;">
             <span class="cerrar" id="cerrarExito">&times;</span>
@@ -317,3 +281,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+

@@ -131,6 +131,11 @@ header {
         color: #ff6b00;
     }
 
+.btn-sm {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+}
+
 .full {
     width: 100%;
 }
@@ -276,6 +281,10 @@ h2 {
         border-color: #ff6b00;
     }
 
+    .producto.sin-stock {
+        opacity: 0.55;
+    }
+
 .producto-img {
     font-size: 3.2rem;
     margin-bottom: 15px;
@@ -291,7 +300,31 @@ h2 {
     color: #ff6b00;
     font-weight: 700;
     font-size: 1.25rem;
-    margin-bottom: 18px;
+    margin-bottom: 8px;
+}
+
+.stock-badge {
+    display: inline-block;
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+    font-weight: 600;
+}
+
+.stock-ok {
+    background: rgba(34,197,94,0.15);
+    color: #22c55e;
+}
+
+.stock-bajo {
+    background: rgba(234,179,8,0.15);
+    color: #eab308;
+}
+
+.stock-agotado {
+    background: rgba(239,68,68,0.15);
+    color: #ef4444;
 }
 
 .seguimiento-box {
@@ -570,8 +603,7 @@ footer {
         color: #ff6b00;
     }
 
-/* PANEL ADMIN */
-.panel-admin {
+.panel-full {
     position: fixed;
     top: 0;
     left: 0;
@@ -580,10 +612,10 @@ footer {
     background: #0f0f0f;
     z-index: 2000;
     overflow-y: auto;
-    padding: 30px 20px;
+    padding: 25px 20px 60px;
 }
 
-.admin-header {
+.admin-top, .mec-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -591,9 +623,10 @@ footer {
     margin: 0 auto 25px;
 }
 
-    .admin-header h2 {
+    .admin-top h2, .mec-header h2 {
         margin: 0;
         text-align: left;
+        font-size: 1.6rem;
     }
 
 .admin-search {
@@ -613,19 +646,21 @@ footer {
 
 .admin-tabs {
     display: flex;
-    gap: 10px;
+    gap: 8px;
     max-width: 1000px;
     margin: 0 auto 25px;
+    flex-wrap: wrap;
 }
 
 .tab-btn {
-    padding: 10px 20px;
+    padding: 10px 18px;
     border: 1px solid #333;
     background: #1a1a1a;
     color: #aaa;
     border-radius: 8px;
     cursor: pointer;
     font-weight: 600;
+    font-size: 0.9rem;
 }
 
     .tab-btn.activo, .tab-btn:hover {
@@ -634,12 +669,12 @@ footer {
         border-color: #ff6b00;
     }
 
-#contenidoAdmin {
+#contenidoAdmin, #listaTrabajosMecanico {
     max-width: 1000px;
     margin: 0 auto;
 }
 
-.admin-card {
+.admin-card, .trabajo-card {
     background: #1a1a1a;
     border: 1px solid #2a2a2a;
     border-radius: 12px;
@@ -647,25 +682,94 @@ footer {
     margin-bottom: 15px;
 }
 
-    .admin-card h4 {
+    .admin-card h4, .trabajo-card h4 {
         color: #ff6b00;
         margin-bottom: 8px;
     }
 
-    .admin-card p {
+    .admin-card p, .trabajo-card p {
         color: #ccc;
         font-size: 0.95rem;
         margin: 4px 0;
     }
 
-    .admin-card .estado-select {
-        margin-top: 10px;
-        padding: 8px 12px;
-        border-radius: 6px;
-        background: #121212;
-        color: #fff;
-        border: 1px solid #333;
+.estado-select, .stock-input {
+    margin-top: 10px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    background: #121212;
+    color: #fff;
+    border: 1px solid #333;
+}
+
+.stock-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+    .stock-row input {
+        width: 80px;
     }
+
+.panel-mecanico {
+    background: #0c0c0c;
+}
+
+.mec-saludo {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 2px;
+}
+
+.mec-subtitulo {
+    max-width: 1000px;
+    margin: 0 auto 20px;
+    color: #aaa;
+    font-size: 0.95rem;
+}
+
+.trabajo-card {
+    border-left: 4px solid #ff6b00;
+}
+
+    .trabajo-card .acciones {
+        display: flex;
+        gap: 8px;
+        margin-top: 14px;
+        flex-wrap: wrap;
+    }
+
+.btn-estado {
+    padding: 8px 14px;
+    border-radius: 6px;
+    border: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+.btn-camino {
+    background: #3b82f6;
+}
+
+.btn-sitio {
+    background: #eab308;
+    color: #111;
+}
+
+.btn-finalizada {
+    background: #22c55e;
+}
+
+.empty-msg {
+    color: #666;
+    text-align: center;
+    padding: 40px 20px;
+}
 
 @media (max-width: 768px) {
     .menu-toggle {
